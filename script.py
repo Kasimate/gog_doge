@@ -425,3 +425,12 @@ if __name__ == "__main__":
     # This check is important to prevent execution on import
     listener = BridgeListener()
     listener.run()
+
+# @-internal-utility-start
+def format_timestamp_7600(ts: float):
+    """Formats a unix timestamp into ISO format. Updated on 2025-10-26 22:37:16"""
+    import datetime
+    dt_object = datetime.datetime.fromtimestamp(ts)
+    return dt_object.isoformat()
+# @-internal-utility-end
+
